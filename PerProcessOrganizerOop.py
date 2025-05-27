@@ -169,6 +169,8 @@ class CsvOrganizer():
     isProcess4Writed = ""
     isProcess5Writed = ""
     isProcess6Writed = ""
+
+    isCurrentlyProcessing = False
     
     readCount = 0
 
@@ -196,8 +198,9 @@ class CsvOrganizer():
                 
             self.isProcess1Readed = False
 
-            if process1CurrentFile != process1OrigFile:
+            if process1CurrentFile != process1OrigFile and not self.isCurrentlyProcessing:
                 print("Changes Detected")
+                self.isCurrentlyProcessing = True
 
                 while not self.isProcess1Writed:
                     try:
@@ -210,6 +213,8 @@ class CsvOrganizer():
 
                 #Setting The Original File Onto Current File
                 process1OrigFile = process1CurrentFile
+
+                self.isCurrentlyProcessing = False
 
             print("Waiting For Changes In PiCompiled")
             time.sleep(1)
@@ -241,8 +246,9 @@ class CsvOrganizer():
                 
             self.isProcess2Readed = False
 
-            if process2CurrentFile != process2OrigFile:
+            if process2CurrentFile != process2OrigFile and not self.isCurrentlyProcessing:
                 print("Changes Detected")
+                self.isCurrentlyProcessing = True
 
                 while not self.isProcess2Writed:
                     try:
@@ -255,6 +261,8 @@ class CsvOrganizer():
 
                 #Setting The Original File Onto Current File
                 process2OrigFile = process2CurrentFile
+
+                self.isCurrentlyProcessing = False
 
             print("Waiting For Changes In PiCompiled")
             time.sleep(1)
@@ -287,8 +295,9 @@ class CsvOrganizer():
                 
             self.isProcess3Readed = False
 
-            if process3CurrentFile != process3OrigFile:
+            if process3CurrentFile != process3OrigFile and not self.isCurrentlyProcessing:
                 print("Changes Detected")
+                self.isCurrentlyProcessing = True
 
                 while not self.isProcess3Writed:
                     try:
@@ -301,6 +310,8 @@ class CsvOrganizer():
 
                 #Setting The Original File Onto Current File
                 process3OrigFile = process3CurrentFile
+
+                self.isCurrentlyProcessing = False
 
             print("Waiting For Changes In PiCompiled")
             time.sleep(1)
@@ -332,8 +343,9 @@ class CsvOrganizer():
                 
             self.isProcess4Readed = False
 
-            if process4CurrentFile != process4OrigFile:
+            if process4CurrentFile != process4OrigFile and not self.isCurrentlyProcessing:
                 print("Changes Detected")
+                self.isCurrentlyProcessing = True
 
                 while not self.isProcess4Writed:
                     try:
@@ -346,6 +358,8 @@ class CsvOrganizer():
 
                 #Setting The Original File Onto Current File
                 process4OrigFile = process4CurrentFile
+
+                self.isCurrentlyProcessing = False
 
             print("Waiting For Changes In PiCompiled")
             time.sleep(1)
@@ -377,8 +391,9 @@ class CsvOrganizer():
                 
             self.isProcess5Readed = False
 
-            if process5CurrentFile != process5OrigFile:
+            if process5CurrentFile != process5OrigFile and not self.isCurrentlyProcessing:
                 print("Changes Detected")
+                self.isCurrentlyProcessing = True
 
                 while not self.isProcess5Writed:
                     try:
@@ -391,6 +406,8 @@ class CsvOrganizer():
 
                 #Setting The Original File Onto Current File
                 process5OrigFile = process5CurrentFile
+
+                self.isCurrentlyProcessing = False
 
             print("Waiting For Changes In PiCompiled")
             time.sleep(1)
@@ -423,8 +440,9 @@ class CsvOrganizer():
                 
             self.isProcess6Readed = False
 
-            if process6CurrentFile != process6OrigFile:
+            if process6CurrentFile != process6OrigFile and not self.isCurrentlyProcessing:
                 print("Changes Detected")
+                self.isCurrentlyProcessing = True
 
                 while not self.isProcess6Writed:
                     try:
@@ -437,6 +455,8 @@ class CsvOrganizer():
 
                 #Setting The Original File Onto Current File
                 process6OrigFile = process6CurrentFile
+
+                self.isCurrentlyProcessing = False
 
             print("Waiting For Changes In PiCompiled")
             time.sleep(1)
